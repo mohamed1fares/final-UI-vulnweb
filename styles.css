@@ -1,0 +1,45 @@
+
+/* Base Imports handled in HTML via Tailwind, custom animations below */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes progressBar {
+    0% { transform: scaleX(0); }
+    50% { transform: scaleX(0.7); }
+    100% { transform: scaleX(1); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-progress-bar {
+    animation: progressBar 2s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0a0a0f; 
+}
+::-webkit-scrollbar-thumb {
+    background: #334155; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #475569; 
+}
+
+/* Utility for hiding scrollbar but keeping functionality if needed */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
